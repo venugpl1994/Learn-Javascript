@@ -1,0 +1,186 @@
+<html>
+	<head>
+		<title>Contact Form Validation</title>
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<script>
+			function validate()
+			{
+				//alert("testing");
+				//step1:fetch the values of textboxes and
+				//store it into respective variables
+				var name=document.getElementById("fname").value;
+				var email=document.getElementById("email").value;
+				var mobile=document.getElementById("mobile").value;
+				var city=document.getElementById("city").value;
+				var message=document.getElementById("msg").value;
+				//alert(name+""+email+""+mobile+""+city+""+message);
+				//step 2:check if respective variable is containing blank 
+				// value,if it is containing a blank value then 
+				//make the respective textbox bordercolor to red else
+				//make it as green
+				if(name==""){
+					document.getElementById("fname").style.borderColor="red";
+					document.getElementById("fnameerror").innerHTML="Invalid Name:can't be left blank";
+				}
+				else{
+					document.getElementById("fname").style.borderColor="green";
+					document.getElementById("fnameerror").innerHTML="";
+				}
+				//-------------------------------------------------------for email-----------------------------------------//
+				if(email==""){
+					document.getElementById("email").style.borderColor="red";
+					document.getElementById("emailerror").innerHTML="Invalid Name:can't be left blank";
+				}
+				else{
+					document.getElementById("email").style.borderColor="green";
+					document.getElementById("emailerror").innerHTML="";
+				}
+				//-----------------------------------for mobile----------------------------------//
+				if(mobile==""){
+					document.getElementById("mobile").style.borderColor="red";
+					document.getElementById("mobileerror").innerHTML="Invalid Name:can't be left blank";
+				}
+				else{
+					document.getElementById("mobile").style.borderColor="green";
+					document.getElementById("mobileerror").innerHTML="";
+				}
+				//--------------------------------for city--------------------------------------//
+				if(city=="")
+				{
+					document.getElementById("city").style.borderColor="red";
+					document.getElementById("cityerror").innerHTML="Invalid City: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("city").style.borderColor="green";
+					document.getElementById("cityerror").innerHTML="";
+				}
+				//--------------------------------for message-----------------------------------//
+				if(message=="")
+				{
+					document.getElementById("msg").style.borderColor="red";
+					document.getElementById("msgerror").innerHTML="Invalid Message: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("msg").style.borderColor="green";
+					document.getElementById("msgerror").innerHTML="";
+				}
+				
+			}
+		
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<div class="panel-title">
+								<h3 class="text-center">Menu</h3>
+							</div>
+						</div>
+						<div class="panel-body">
+							<ul class="list-group">
+								<li class="list-group-item"><a href="contact.html">Add Contact</a></li>
+								<li class="list-group-item"><a href="student.html">Add Student</a></li>
+								<li class="list-group-item"><a href="tutor.html">Add Tutor</a></li>
+							
+							</ul>
+						
+						</div>
+						<div class="panel-footer"></div>
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<div class="panel-title">
+								<h3 class="text-center">Contact</h3>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div class="form-group">
+								<div class="row">
+								<div class="col-sm-4">
+									<label>Name</label>
+								</div>
+								<div class="col-sm-8">
+								<input type="text" placeholder="enter name" class="form-control" id="fname">
+								<i style="color:red" id="fnameerror"></i>
+								</div>	
+								
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row">
+								<div class="col-sm-4">
+									<label>E-mail</label>
+								</div>
+								<div class="col-sm-8">
+								<input type="text" placeholder="enter email" class="form-control" id="email">
+								<i style="color:red" id="emailerror"></i>
+								</div>	
+								
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row">
+								<div class="col-sm-4">
+									<label>Mobile</label>
+								</div>
+								<div class="col-sm-8">
+								<input type="text" placeholder="enter mobile" class="form-control" id="mobile">
+								<i style="color:red" id="mobileerror"></i>
+								</div>	
+								
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row">
+								<div class="col-sm-4">
+									<label>Message</label>
+								</div>
+								<div class="col-sm-8">
+								<textarea id="msg" class="form-control"></textarea>
+								<i style="color:red" id="msgerror"></i>
+								</div>	
+								
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row">
+								<div class="col-sm-4">
+									<label>city</label>
+								</div>
+								<div class="col-sm-8">
+								<select id="city" class="form-control">
+									<option value="">choose city</option>
+									<option>mumbai</option>
+									<option>Delhi</option>
+									<option>banglore</option>
+								</select>
+								<i style="color:red" id="cityerror"></i>
+								</div>	
+								
+								</div>
+							</div>
+						
+						</div>
+						<div class="panel-footer">
+						<div class="form-group">
+						<div class="row">
+						<div class="col-sm-12 text-center">
+							<button type="button" class="btn btn-info" onclick="validate()">send</button>
+							<button type="reset" class="btn btn-danger">clear</button>
+						</div>
+						</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

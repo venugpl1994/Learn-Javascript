@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<title>Saving</title>
+		<style>
+			#div1{
+			height:500px;
+			width:300px;
+			background-color:white;
+			border:5px solid red;
+			text-align:center;
+			}
+		
+		
+		</style>
+		<script>
+			class student
+			{
+				constructor()
+				{
+					this.name="abc";
+					this.email="cdegmail.com";
+					this.mobile="";
+					this.city="";
+					this.msg="hello";
+				
+				}
+				get savestudent()
+				{
+					this.name=document.getElementById("fname").value;
+					this.email=document.getElementById("email").value;
+					this.mobile=document.getElementById("mobile").value;
+					this.city=document.getElementById("city").value;
+					this.msg=document.getElementById("msg").value;
+					
+					alert("data save successfully");	
+				
+				}
+				get fetchstudent()
+				{
+					var data="<table bgcolor='skyblue' align='center';>";
+					data=data+"<tr><th>Name</th><th>Email</th><th>Mobile</th><th>City</th><th>Message</th></tr>";
+					data=data+"<tr>";
+						data=data+"<td>"+this.name+"</td>";
+						data=data+"<td>"+this.email+"</td>";
+						data=data+"<td>"+this.mobile+"</td>";
+						data=data+"<td>"+this.city+"</td>";
+						data=data+"<td>"+this.msg+"</td>";
+						
+						
+					data=data+"</tr>";
+					data=data+"</table>";
+					document.getElementById("result").innerHTML=data;
+						
+				
+				}
+			
+			}
+			var obj=new student();
+			function validate()
+			{
+				var name=document.getElementById("fname").value;
+				var email=document.getElementById("email").value;
+				var mobile=document.getElementById("mobile").value;
+				var city=document.getElementById("city").value;
+				var msg=document.getElementById("msg").value;
+				var status=true;
+				if(name=="")
+				{
+					status=false;
+					document.getElementById("fname").style.borderColor="red";
+					document.getElementById("nameerror").innerHTML="Invalid Name: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("fname").style.borderColor="green";
+					document.getElementById("nameerror").innerHTML="";
+				}
+				
+				if(email=="")
+				{
+					status=false;
+					document.getElementById("email").style.borderColor="red";
+					document.getElementById("emailerror").innerHTML="Invalid Email: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("email").style.borderColor="green";
+					document.getElementById("emailerror").innerHTML="";
+				}
+				
+				if(mobile==""||mobile.length<10||mobile.length>10||isNaN(mobile))
+				{
+					status=false;
+					document.getElementById("mobile").style.borderColor="red";
+					document.getElementById("mobileerror").innerHTML="Invalid Mobile No: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("mobile").style.borderColor="green";
+					document.getElementById("mobileerror").innerHTML="";
+				}
+				
+				if(city=="")
+				{
+					status=false;
+					document.getElementById("city").style.borderColor="red";
+					document.getElementById("cityerror").innerHTML="Please select your City";
+				}
+				else
+				{
+					document.getElementById("city").style.borderColor="green";
+					document.getElementById("cityerror").innerHTML="";
+				}
+				if(msg=="")
+				{
+					status=false;
+					document.getElementById("msg").style.borderColor="red";
+					document.getElementById("msgerror").innerHTML="Invalid Address: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("msg").style.borderColor="green";
+					document.getElementById("msgerror").innerHTML="";
+				}
+				return status;
+			}
+				
+		
+		
+		</script>
+	</head>
+		<body>
+		<div id="div1">
+			Name:<input type="text" id="fname" placeholder="Enter Name"><i style="color:red" id="nameerror"></i><br><br><br>
+			Email:<input type="text" id="email" placeholder="Enter email"><i style="color:red" id="emailerror"></i><br><br><br>
+			Mobile:<input type="text" id="mobile" placeholder="Enter mobile no"><i style="color:red" id="mobileerror"></i><br><br><br>
+			<tr>
+				<th>City</th>
+				<td>
+					<select id="city">
+						<option>choose city</option>
+						<option>Banglore</option>
+						<option>puna</option>
+						<option>chenai</option>
+					</select>
+				</td>
+			</tr><i style="color:red" id="cityerror"></i><br><br>
+			Message:<textarea id="msg" placeholder="enter message"></textarea><br><br><br>
+			<button type="button" onclick="obj.savestudent()">save</button>
+			<button type="button" onclick="obj.fetchstudent()" onclick="validate()">fetch</button>
+			<i style="color:red" id="msgerror"></i>
+		</div>
+		<div id="result"></div>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<script>
+			function abc()
+			{
+				document.getElementById("msg").innerHTML=photo;
+			}
+			function abc(photo)
+			{
+				switch(photo)
+				{
+					case "1.jpg" :
+						hideall();
+						document.getElementById("one").style.display="inline";
+						break;
+						
+					case "2.jpg" :
+						hideall();
+						document.getElementById("two").style.display="inline";
+						break;
+						
+					case "3.jpg" :
+						hideall();
+						document.getElementById("three").style.display="inline";
+						break;
+						
+					case "4.jpg" :
+						hideall();
+						document.getElementById("four").style.display="inline";
+						break;
+				}
+			
+			}
+			function hideall()
+			{
+				document.getElementById("one").style.display="none";
+				document.getElementById("two").style.display="none";
+				document.getElementById("three").style.display="none";
+				document.getElementById("four").style.display="none";
+			}
+		</script>
+	
+	</head>
+		<body onload="hideall()">
+		<h1>Javaascript switch case Example</h1>
+		User Name:
+			<select onchange="abc(this.value)">
+				<option value="">choose Name</option>
+				<option value="1.jpg">User one</option>
+				<option value="2.jpg">User Two</option>
+				<option value="3.jpg">User Three</option>
+				<option value="4.jpg">User Four</option>
+			</select>
+			<p align="center">
+				<img src="1.jpg" height="100" width="100" id="one"/>
+				<img src="2.jpg" height="100" width="100" id="two"/>
+				<img src="3.jpg" height="100" width="100" id="three"/>
+				<img src="4.jpg" height="100" width="100" id="four"/>
+			</p>
+	</body>
+
+
+</html>

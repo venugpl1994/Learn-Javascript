@@ -1,0 +1,19 @@
+<html>
+<body>
+var peopleFactory=function(name,age,state){
+var temp=[];
+temp.age=age;
+temp.name=name;
+temp.state=state;
+
+temp.printPerson=function(){
+	console.log(this.name+""+this.age+""+this.state);
+};
+retuen temp;
+};
+var Person1=peopleFactory('johan',33,'CA');
+var Person2=peopleFactory('johan',23,'CA');
+person1.printPerson
+person2.printPerson
+</body>
+</html>

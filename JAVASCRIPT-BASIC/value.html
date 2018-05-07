@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script>
+			function abc(a)
+			{
+				var total=a.length;
+				var b=100-total;
+				document.getElementById("msg").innerHTML=b;
+				
+			}
+		</script>
+	
+	</head>
+	<body>
+		<h1>js+html comm..........for non input field</h1>
+		<textarea col="70" maxlength="100" onkeyup="abc(this.value)"></textarea>
+		<br>
+		<label id="msg">100</label>
+		is left out of 100 character
+	
+	</body>
+
+
+</html>

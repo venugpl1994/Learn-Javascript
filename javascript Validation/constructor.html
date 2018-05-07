@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>oops concept</title>
+		<script>
+			class A{
+				constructor() //intializing the variable and making them global
+				{
+					this.a="abc";
+					this.b="def";
+				}
+				get fetch() //get is keyword and fetch is function define inside class 
+				{
+					alert(this.a);
+					alert(this.b);
+				}
+			}
+			var obj=new A();//creating object of class A
+			
+		</script>
+	</head>
+	<body>
+		<button type="button" onclick="obj.fetch()">fetch</button>
+	</body>
+	
+</html>

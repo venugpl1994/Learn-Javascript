@@ -1,0 +1,436 @@
+<html>
+	<head>
+		<title>Tutor Registration</title>
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<script>
+			function stuvalidate()
+			{
+				//alert("testing");
+				//step1:fetch the value of the text boxes and store it into respective variables
+				var name=document.getElementById("fname").value;
+				var email=document.getElementById("femail").value;
+				var password=document.getElementById("pass").value;
+				var conformpass=document.getElementById("repass").value;
+				var city=document.getElementById("city").value;
+				var state=document.getElementById("state").value;
+				var mobile=document.getElementById("fmobno").value;
+				var experience=document.getElementById("expe").value;
+				var designation=document.getElementById("fdegi").value;
+				var salary=document.getElementById("salary").value;
+				var quali=document.getElementById("quali").value;
+				var address=document.getElementById("address").value;
+				var sub1=document.getElementById("sub1").checked;
+				var sub2=document.getElementById("sub2").checked;
+				var sub3=document.getElementById("sub3").checked;
+				var sub4=document.getElementById("sub4").checked;
+				var pay1=document.getElementById("fee1").checked;
+				var pay2=document.getElementById("fee2").checked;
+				var pay3=document.getElementById("fee3").checked;
+				var pay4=document.getElementById("fee4").checked;
+				var status=true;
+				
+				if(name=="")
+				{
+					status=false;
+					document.getElementById("fname").style.borderColor="red";
+					document.getElementById("nameerror").innerHTML="Invalid Name: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("fname").style.borderColor="green";
+					document.getElementById("nameerror").innerHTML="";
+				}
+				
+				if(email=="")
+				{
+					status=false;
+					document.getElementById("femail").style.borderColor="red";
+					document.getElementById("emailerror").innerHTML="Invalid Email: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("femail").style.borderColor="green";
+					document.getElementById("emailerror").innerHTML="";
+				}
+				
+				if(password=="")
+				{
+					status=false;
+					document.getElementById("pass").style.borderColor="red";
+					document.getElementById("passerror").innerHTML="Invalid password: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("pass").style.borderColor="green";
+					document.getElementById("passerror").innerHTML="";
+				}
+				
+				if(conformpass=="")
+				{
+					status=false;
+					document.getElementById("repass").style.borderColor="red";
+					document.getElementById("repasserror").innerHTML="Invalid password: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("repass").style.borderColor="green";
+					document.getElementById("repasserror").innerHTML="";
+				}
+				
+				if(city=="")
+				{
+					status=false;
+					document.getElementById("city").style.borderColor="red";
+					document.getElementById("cityerror").innerHTML="Invalid city: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("city").style.borderColor="green";
+					document.getElementById("cityerror").innerHTML="";
+				}
+				
+				if(state=="")
+				{
+					status=false;
+					document.getElementById("state").style.borderColor="red";
+					document.getElementById("stateerror").innerHTML="Invalid state: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("state").style.borderColor="green";
+					document.getElementById("stateerror").innerHTML="";
+				}
+				
+				if(mobile=="")
+				{
+					status=false;
+					document.getElementById("fmobno").style.borderColor="red";
+					document.getElementById("mobileerror").innerHTML="Invalid mobile: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("fmobno").style.borderColor="green";
+					document.getElementById("mobileerror").innerHTML="";
+				}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				if(experience=="")
+				{
+					status=false;
+					document.getElementById("expe").style.borderColor="red";
+					document.getElementById("expierror").innerHTML="Invalid experience: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("expe").style.borderColor="green";
+					document.getElementById("expierror").innerHTML="";
+				}
+				
+				if(designation=="")
+				{
+					status=false;
+					document.getElementById("fdegi").style.borderColor="red";
+					document.getElementById("degierror").innerHTML="Invalid designation: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("fdegi").style.borderColor="green";
+					document.getElementById("degierror").innerHTML="";
+				}
+				
+				if(salary=="")
+				{
+					status=false;
+					document.getElementById("salary").style.borderColor="red";
+					document.getElementById("salaerror").innerHTML="Invalid salary:Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("salary").style.borderColor="green";
+					document.getElementById("salaerror").innerHTML="";
+				}
+				
+				if(quali=="")
+				{
+					status=false;
+					document.getElementById("quali").style.borderColor="red";
+					document.getElementById("qualierror").innerHTML="Invalid qualification: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("quali").style.borderColor="green";
+					document.getElementById("qualierror").innerHTML="";
+				}
+				
+				if(address=="")
+				{
+					status=false;
+					document.getElementById("address").style.borderColor="red";
+					document.getElementById("addresserror").innerHTML="Invalid address: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("address").style.borderColor="green";
+					document.getElementById("addresserror").innerHTML="";
+				}
+				
+				//for checkbox
+				if(sub1==true||sub2==true||sub3||sub4)
+				{
+					document.getElementById("subjecterror").innerHTML="";
+				}
+				else{
+					status=false;
+					document.getElementById("subjecterror").innerHTML="Please select your hobby";
+				}
+				if(pay1==true||pay2==true||pay3||pay4)
+				{
+					document.getElementById("paymenterror").innerHTML="";
+				}
+				else{
+					status=false;
+					document.getElementById("paymenterror").innerHTML="Please select your payment mode";
+				}
+				return status;
+				
+			}
+		</script>
+	</head>
+	
+	<body>
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12">
+				<form action="#" id="f1" method="POST">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<div class="panel-title">
+							<h3 class="text-center">Tutor Registration</h3>
+							</div>
+						</div>
+						
+						<div class="panel-body">
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-1">
+										<label>Name</label>
+									</div>
+									<div class="col-sm-3">
+										<input type="text" placeholder="Enter Name" class="form-control" id="fname">
+										<i style="color:red" id="nameerror"></i>
+				                    </div>
+									<div class="col-sm-1">
+									<label>Email</label>
+									</div>
+									<div class="col-sm-3">
+										
+										<input type="text" placeholder="enter email" class="form-control" id="femail">
+										<i style="color:red" id="emailerror"></i>
+									</div>
+									
+									<div class="col-sm-1">
+									<label>Password</label>
+									</div>
+									<div class="col-sm-3">
+										<input type="password" placeholder="enter your password" class="form-control" id="pass">
+										<i style="color:red" id="passerror"></i>
+									</div>
+								</div><!-- row 1 ends -->
+								<br>
+								<div class="row">
+									<div class="col-sm-1">
+									<label>Conform password</label>
+									</div>
+									<div class="col-sm-3">
+									<input type="password" placeholder="re-enter password" class="form-control" id="repass">
+									<i style="color:red" id="repasserror"></i>
+									</div>
+									
+									<div class="col-sm-1">
+									<label>City</label>
+									</div>
+									<div class="col-sm-3">
+										<select id="city" class="form-control">
+											<option value="">Choose city</option>
+											<option value="mumbai">Mumbai</option>
+											<option value="bangalore">Bangalore</option>
+											<option value="pune">Pune</option>
+										</select>
+										<i style="color:red" id="cityerror"></i>
+									</div>
+									
+									<div class="col-sm-1">
+									<label>State</label>
+									</div>
+									<div class="col-sm-3">
+										<select id="state" class="form-control">
+											<option value="">Choose State</option>
+											<option value="kernataka">kernataka</option>
+											<option value="maharashtra">maharashtra</option>
+											<option value="bihar">Bihar</option>
+										</select>
+										<i style="color:red" id="stateerror"></i>
+									</div>
+								</div><!-- row 2 ends -->
+								<br>
+								<div class="row">
+									<div class="col-sm-1">
+									<label>Mobile</label>
+									</div>
+									<div class="col-sm-3">
+									<input type="text" placeholder="enter mobile" class="form-control" id="fmobno">
+									<i style="color:red" id="mobileerror"></i>
+									</div>
+									
+									<div class="col-sm-1">
+									<label>Experience</label>
+									</div>
+									<div class="col-sm-3">
+										<select id="expe" class="form-control">
+											<option value="">Choose experience</option>
+											<option value="1">1 year</option>
+											<option value="2-5">2-5 years</option>
+											<option value="6 years">more then 5 yrs</option>
+										</select>
+										<i style="color:red" id="expierror"></i>
+									</div>
+									
+									<div class="col-sm-1">
+									<label>Designation</label>
+									</div>
+									<div class="col-sm-3">
+									<input type="text" placeholder="enter designation" class="form-control" id="fdegi">
+									<i style="color:red" id="degierror"></i>
+									</div>
+								</div><!-- row 3 ends here -->
+								<br>
+								
+								<div class="row">
+									<div class="col-sm-1">
+									<label>Expected Salary</label>
+									</div>
+									<div class="col-sm-3">
+									<select id="salary" class="form-control">
+										<option value="">choose salary</option>
+										<option value="1-3">1-3 lakhs</option>
+										<option value="3-6">3-6 lakhs</option>
+									</select>
+									<i style="color:red" id="salaerror"></i>
+									</div>
+									
+									<div class="col-sm-1">
+									<label>Qualification</label>
+									</div>
+									<div class="col-sm-3">
+									<select id="quali" class="form-control">
+										<option value="">choose qualification</option>
+										<option value="B.E">B.E</option>
+										<option value="B.com">B.Com</option>
+									</select>
+									<i style="color:red" id="qualierror"></i>
+									</div>
+									
+									<div class="col-sm-1">
+									<label>Address</label>
+									</div>
+									<div class="col-sm-3">
+										<textarea id="address" class="form-control"></textarea>
+										<i style="color:red" id="addresserror"></i>
+									</div>
+								</div><!-- row 4 ends -->
+								<br>
+								
+								<div class="row">
+									<div class="col-sm-1">
+									<label>Subject Prefered</label>
+									</div>
+									<div class="col-sm-1">
+										<input type="checkbox" value="Java" name="subject" id="sub1">Java
+									</div>
+										<i style="color:red" id="subjecterror"></i>
+									<div class="col-sm-1">
+										<input type="checkbox" value="Php" name="subject" id="sub2">Php
+									</div>
+										<i style="color:red" id="subjecterror"></i>
+									<div class="col-sm-1">
+										<input type="checkbox" value="c++" name="subject" id="sub3">C++
+									</div>
+										<i style="color:red" id="subjecterror"></i>
+									<div class="col-sm-1">
+										<input type="checkbox" value="Ios" name="subject" id="sub4">Ios
+										</div>
+									</div>
+										<i style="color:red" id="subjecterror"></i>
+									
+								</div><!-- row 5 ends here-->
+								<br>
+								
+								<div class="row">
+									<div class="col-sm-1">
+									<label>Registration Fee</label>
+									</div>
+									<div class="col-sm-1">
+									<input type="radio" value="cash" name="payment" id="fee1">Cash
+									</div>
+										<i style="color:red" id="paymenterror"></i>
+										
+									<div class="col-sm-1">
+									<input type="radio" value="credit" name="payment" id="fee2">Credit
+									</div>
+										<i style="color:red" id="paymenterror"></i>
+										
+									<div class="col-sm-1">
+									<input type="radio" value="debit" name="payment" id="fee3">Debit
+									</div>
+										<i style="color:red" id="paymenterror"></i>
+									
+									<div class="col-sm-2">
+									<input type="radio" value="net" name="payment" id="fee4">NetBanking
+									</div>
+										<i style="color:red" id="paymenterror"></i>
+								</div><!-- row 6 ends here -->
+							</div><!-- form group ends here-->
+						</div><!-- panel body ends here-->
+						
+						<div class="panel-footer">
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-12 text-center">
+										<button type="button" class="btn btn-info" onclick="stuvalidate()">Register</button>
+										<button type="reset" class="btn btn-danger">Clear</button>
+									</div>
+								</div>
+							</div>
+						</div><!-- footer ends here-->
+					</div> <!-- panel ends here -->
+				</div><!--col 12 ends here -->
+			
+			</div><!-- row ends here-->
+		</div><!-- container ends here-->
+	
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<script>
+			function abc()
+			{
+				alert("Hello abc");
+			
+			}
+			function xyz(a)
+			{
+				alert(a);//
+			}
+			
+		</script>
+	</head>
+	<body onload="xyz('welcome to my website')">
+		<button onclick="abc()">1 Click</button>
+		<button onclick="abc()">2 Click</button>
+		<button onclick="abc()"> click any left/right </button>
+		onchange:
+			<select onchange="abc()">
+				<option value="">choose city</option>
+				<option value="1">Banglore</option>
+				<option value="2">pune</option>
+				<option value="3">chennai</option>
+				<option value="4">ghhhhhy</option>
+			</select>
+		onchange:
+			<select onchange="xyz(this.value)">
+				<option value="">choose city</option>
+				<option value="1">Banglore</option>
+				<option value="2">pune</option>
+				<option value="3">chennai</option>
+				<option value="4">ghhhhhy</option>
+			</select>
+		<hr color="red">
+			<marquee onmousemove="this.stop()" onmouseout="this.start()">
+				hello this is moving text by marquee
+			</marquee>
+			<hr color="red">
+			<h2>Kerboard event</h2>
+				Key Press: <input type="text" onkeypress="xyz(this.value)"><hr>
+				Key up: <input type="text" onkeyup="xyz(this.value)"><hr>
+				Key Down: <input type="text" onkeydown="xyz(this.value)"><hr>
+				Key Focus: <input type="text" onfocus="xyz(this.value)"><hr>
+				Key Blur: <input type="text" onblur="xyz(this.value)"><hr>
+	</body>
+
+
+</html>

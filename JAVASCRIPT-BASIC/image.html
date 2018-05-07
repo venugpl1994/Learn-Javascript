@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<script>
+			function abc()
+			{
+				var h=document.getElementById("height").value;
+				var w=document.getElementById("width").value;
+				if(h!="")
+				{
+					document.getElementById("myimage").height=h;
+				}
+				if(w!="")
+				{
+					document.getElementById("myimage").width=w;
+				}
+			}
+		</script>
+	
+	</head>
+	<body>
+		<h1>Image height width by javascript</h1>
+		<p>
+			Height:<input type="text" id="height">
+			Width:<input type="text" id="width">
+			<button onclick="abc()">Apply</button>
+		</p>
+		<img src="1.jpg" height="400" width="400" id="myimage"/>
+		
+	
+	</body>
+
+
+</html>

@@ -1,0 +1,269 @@
+<html>
+	<head>
+		<title>Student form Validation</title>
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		
+		<script>
+			function validatestudent()
+			{
+				//alert("testing");
+				//step1:fetch the value of the text boxes and store it into respective variables
+				var name=document.getElementById("fname").value;
+				var email=document.getElementById("femail").value;
+				var mobile=document.getElementById("fmobno").value;
+				var city=document.getElementById("city").value;
+				var state=document.getElementById("state").value;
+				var address=document.getElementById("address").value;
+				var male=document.getElementById("male").checked;
+				var female=document.getElementById("female").checked;
+				var hobby1=document.getElementById("hobby1").checked;
+				var hobby2=document.getElementById("hobby2").checked;
+				var hobby3=document.getElementById("hobby3").checked;
+				var hobby4=document.getElementById("hobby4").checked;
+				//alert("male:"+male);
+				//alert("female:"+female);
+				
+				//alert(name+" "+email+" "+mobile+" "+city+" "+message);
+				
+				if(name=="")
+				{
+					document.getElementById("fname").style.borderColor="red";
+					document.getElementById("nameerror").innerHTML="Invalid Name: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("fname").style.borderColor="green";
+					document.getElementById("nameerror").innerHTML="";
+				}
+				
+				if(email=="")
+				{
+					document.getElementById("femail").style.borderColor="red";
+					document.getElementById("emailerror").innerHTML="Invalid Email: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("femail").style.borderColor="green";
+					document.getElementById("emailerror").innerHTML="";
+				}
+				
+				if(mobile=="")
+				{
+					document.getElementById("fmobno").style.borderColor="red";
+					document.getElementById("mobileerror").innerHTML="Invalid Mobile No: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("fmobno").style.borderColor="green";
+					document.getElementById("mobileerror").innerHTML="";
+				}
+				
+				if(city=="")
+				{
+					document.getElementById("city").style.borderColor="red";
+					document.getElementById("cityerror").innerHTML="Please select your City";
+				}
+				else
+				{
+					document.getElementById("city").style.borderColor="green";
+					document.getElementById("cityerror").innerHTML="";
+				}
+				
+				if(state=="")
+				{
+					document.getElementById("state").style.borderColor="red";
+					document.getElementById("stateerror").innerHTML="Please select your State";
+				}
+				else
+				{
+					document.getElementById("state").style.borderColor="green";
+					document.getElementById("stateerror").innerHTML="";
+				}
+				
+				if(address=="")
+				{
+					document.getElementById("address").style.borderColor="red";
+					document.getElementById("addresserror").innerHTML="Invalid Address: Can't be left Blank";
+				}
+				else
+				{
+					document.getElementById("address").style.borderColor="green";
+					document.getElementById("addresserror").innerHTML="";
+				}
+				
+				//for radio button
+				if(male==true||female==true)
+				{
+					document.getElementById("gendererror").innerHTML="";
+				}
+				else{
+					document.getElementById("gendererror").innerHTML="Please select the gender";
+				}
+				
+				//for checkbox
+				if(hobby1==true||hobby2==true||hobby3||hobby4)
+				{
+					document.getElementById("hobbyerror").innerHTML="";
+				}
+				else{
+					document.getElementById("hobbyerror").innerHTML="Please select your hobby";
+				}
+			}
+		</script>
+		
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<div class="panel-title">
+								<h3 class="text-center">Menu</h3>
+							</div>
+						</div>
+						<div class="panel-body">
+							<ul class="list-group">
+								<li class="list-group-item"><a href="Contact_validation.html"> Add Contact</a></li>
+								<li class="list-group-item"><a href="Student_validation.html"> Add Student</a></li>
+								<li class="list-group-item"><a href="tutor.html"> Add Tutor</a></li>
+							</ul>
+						</div>
+						<div class="panel-footer"></div>
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<div class="panel-title">
+								<h3 class="text-center">Contact</h3>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-4">
+										<label>name</label>
+									</div>
+									<div class="col-sm-8">
+										<input type="text" placeholder="Enter Name" class="form-control" id="fname">
+										<i style="color:red" id="nameerror"></i>
+				                    </div>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-4">
+										<label>email</label>
+									</div>
+									<div class="col-sm-8">
+										<input type="text" placeholder="Enter Email" class="form-control" id="femail">
+										<i style="color:red" id="emailerror"></i>
+				                    </div>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-4">
+										<label>Mobile</label>
+									</div>
+									<div class="col-sm-8">
+										<input type="text" placeholder="Enter Mobile" class="form-control" id="fmobno">
+										<i style="color:red" id="mobileerror"></i>
+				                    </div>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-4">
+										<label>Gender</label>
+									</div>
+									<div class="col-sm-8">
+										<input type="radio" value="male" name="gender" id="male">Male
+										<input type="radio" value="female" name="gender" id="female">Female
+										<i style="color:red" id="gendererror"></i>
+				                    </div>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-4">
+										<label>Hobby</label>
+									</div>
+									<div class="col-sm-8">
+										<input type="checkbox" value="reading" name="hobby" id="hobby1">Reading
+										<input type="checkbox" value="writing" name="hobby" id="hobby2">Writing
+										<input type="checkbox" value="dancing" name="hobby" id="hobby3">Dancing
+										<input type="checkbox" value="singing" name="hobby" id="hobby4">Singing
+				                    </div>
+									<i style="color:red" id="hobbyerror"></i>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-4">
+										<label>City</label>
+									</div>
+									<div class="col-sm-8">
+										<select id="city" class="form-control">
+											<option value="">Choose city</option>
+											<option value="mumbai">Mumbai</option>
+											<option value="bangalore">Bangalore</option>
+											<option value="pune">Pune</option>
+										</select>
+										<i style="color:red" id="cityerror"></i>
+				                    </div>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-4">
+										<label>State</label>
+									</div>
+									<div class="col-sm-8">
+										<select id="state" class="form-control">
+											<option value="">Choose State</option>
+											<option value="maharashtra">Maharashtra</option>
+											<option value="karnataka">Karnataka</option>
+											<option value="TamilNadu">TamilNadu</option>
+										</select>
+										<i style="color:red" id="stateerror"></i>
+				                    </div>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-4">
+										<label>Address</label>
+									</div>
+									<div class="col-sm-8">
+										<textarea id="address" class="form-control"></textarea>
+										<i style="color:red" id="addresserror"></i>
+				                    </div>
+								</div>
+							</div>
+						</div>
+						<div class="panel-footer">
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-12 text-center">
+										<button type="button" class="btn btn-info" onclick="validatestudent()">Send</button>
+										<button type="button" class="btn btn-danger">Clear</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

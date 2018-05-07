@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>oops concept</title>
+		<script>
+			class A{
+				constructor() //intializing the variable and making them global
+				{
+					
+					this.a="abc";
+					this.b="def";
+				}
+				get fetch() //get is keyword and fetch is function define inside class 
+				{
+					alert(this.a);
+					alert(this.b);
+				}
+			}//class closes
+			class B extends A{
+				constructor()
+				{
+					super();
+					this.c="ganga";
+					this.d="rama";
+				}
+				get fetchdata()
+				{
+					alert(this.c);
+					alert(this.d);
+					this.fetch();
+				
+				}
+			}//class B closes
+			var obj=new B();//creating object of class A
+			
+		</script>
+	</head>
+	<body>
+		<button type="button" onclick="obj.fetchdata()">fetch</button>
+	</body>
+	<!--yoginidparkhi@gmail.com-->
+	
+</html>

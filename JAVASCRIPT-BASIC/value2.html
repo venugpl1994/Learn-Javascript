@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script>
+			function abc(a)
+			{
+				if(a=="m")
+				{
+					var mymsg="Male";
+				}else{
+				
+					var mymsg="Female";
+				
+				}
+				
+				document.getElementById("msg").innerHTML="you are :" +mymsg;
+				
+			}
+		</script>
+	
+	</head>
+	<body>
+		<h1>Image Hide Show</h1>
+		select option:
+			<input type="radio" name="gender" onclick="abc('m')">Male
+			<input type="radio" name="gender" onclick="abc('f')">Female
+			<p id="msg"></p>
+		
+	
+	</body>
+
+
+</html>

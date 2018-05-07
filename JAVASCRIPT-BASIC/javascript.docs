@@ -1,0 +1,32 @@
+1.Types of popup window in js?
+--------------------------------------------------------------------------
+	1.alert-It gives conformation msg to user
+	2.confirm-It collect final conformation from user.
+	3.prompt-It will ask for solid input.
+--------------------------------------------
+when a user intract with software using input divice is called event.Ex-button onclick()
+-----------------------------------------------------------------------------
+Mouse:
+1.onclick
+2.ondblclick
+3.onmousedown
+4.onchange
+5.onmousemove
+6.onmouseout
+-----------------------------------------------------------------------------
+Keyboard:
+1.onkeypress
+2.onkeyup
+3.onkeydown
+4.onfocus
+5.onblur
+------------------------------------------------------------------------------------
+Body:
+1.onload
+-------------------------------------------------------------------------------------
+Form:
+2.onsubmit
+Note: combination of mouse(click,dbl,click,mousedown)+keyboard(onkeypress=>enter key)
+------------------------------------------------------------------------------------
+how to communicate from html to JS and JS to html.
+
